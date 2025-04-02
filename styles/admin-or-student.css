@@ -1,0 +1,135 @@
+@font-face {
+    font-family: "Nunito";
+    src: url(/Nunito-Font/static/Nunito-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url(/Oswald-Font/static/Oswald-Bold.ttf);
+}
+
+:root{
+    --form-bg: #f1f1f1;
+    --paragraph-color: #3179BE;
+    --form-btn-border-hover: #3179BE;
+    --overlay-color: #015bb54c;
+    --box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+html body{
+    flex-direction: column;
+    background: linear-gradient(var(--overlay-color), var(--overlay-color)), url(/images/buksu-image.jpg) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+}
+
+form{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--form-bg);
+    font-family: "Nunito";
+    height: 300px;
+    box-shadow: var(--box-shadow);
+}
+
+.logo-container{
+    justify-content: start;
+}
+
+.logo-container .logo{
+    width: 200px;
+}
+
+.form-title{
+    align-items: end;
+}
+
+.logo-container figcaption{
+    font-family: "Oswald";
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.button-container{
+    grid-template-rows: repeat(2, 65px);
+    z-index: 10;
+    place-items: center;
+    width: 100%;
+}
+
+.button-container .btn{
+    border: 1px solid var(--form-btn-border-hover);
+    color: var(--paragraph-color);
+    background-color: inherit;
+    padding: 10px;
+    font-size: 0.9em;
+    width: 80%;
+}
+
+.button-container .btn:hover{
+    border: 1px solid var(--form-btn-border-hover);
+    color: var(--form-bg);
+    transition: 0.3s;
+    background-color: var(--form-btn-border-hover);
+}
+
+/* For Small Mobile */
+@media screen and (width <= 320px) {
+    form{
+        height: 410px;
+        width: 280px;
+    }
+}
+
+/* For Medium Mobile */
+@media screen and (width > 320px) and (width <= 375px) {
+    .logo{
+        width: 230px;
+    }
+
+    form{
+        height: 410px;
+        width: 345px;
+        gap: 1vh;
+    }
+
+    form .btn{
+        width: 105px;
+    }
+}
+
+/* Medium Mobile up to Laptop Size */
+@media screen and (width > 375px) and (width <= 1440px){
+    .logo{
+        width: 230px;
+    }
+
+    form{
+        height: 410px;
+        width: 345px;
+        gap: 1vh;
+    }
+
+    form .btn{
+        width: 100px;
+    }
+}
+
+/* Larger than Laptops */
+@media screen and (width > 1440px) {
+    .logo{
+        width: 240px;
+    }
+
+    form{
+        height: 410px;
+        width: 345px;
+        gap: 1vh;
+    }
+
+    form .btn{
+        width: 100px;
+    }
+}
+

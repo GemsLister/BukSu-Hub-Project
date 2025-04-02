@@ -1,0 +1,235 @@
+:root{
+    --form-bg: #f1f1f1;
+    --paragraph-color: #1E1E1E;
+    --forgot-password-color: #1e1e1ea8;
+    --forgot-password-hover: #1e1e1e6f;
+    /* --form-border: #F7914D;
+    --form-btn-border-hover: #F7914D; */
+    --form-horizontal: #3179BE;
+    --overlay-color: #015bb54c;
+    --buksu-color: #3179BE;
+    --box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    --paragraph-color: #3179BE;
+    --form-btn-border-hover: #3179BE;
+}
+
+
+html body{
+    /* Columns and Rows */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    background-color: var(--bg-color);
+    height: 60vh;
+}
+
+main{
+    height: 90vh;
+    width: 100vw;
+}
+
+form{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 455px;
+    width: 350px;
+    box-shadow: var(--box-shadow);
+    /* border: 2px solid var(--form-border); */
+    background-color: var(--form-bg);
+}
+
+form figure img{
+    height: 110px;
+}
+
+.inputs-container{
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+}
+
+.inputs-container .input-group{
+    height: 0.4in;
+}
+
+.inputs-container .btn{
+    width: 100%;
+}
+
+.inputs-container .btn:nth-of-type(2){
+    margin: 2vh 0 0 0;
+    width: 80%;
+}
+
+form .btn{
+    color: var(--paragraph-color);
+    border: 1px solid var(--form-btn-border-hover);
+}
+
+form .btn:hover{
+    color: var(--form-bg);
+    background-color: var(--form-btn-border-hover);
+    border: 1px solid var(--form-btn-border-hover);
+    transition: 0.3s;
+}
+
+form hr{
+    border: 1px solid var(--form-horizontal);
+    width: 100%;
+}
+
+form a{
+    margin: 8px 0 0 0;
+    text-decoration: none;
+    color: var(--forgot-password-color);
+}
+
+form a:hover{
+    text-decoration: none;
+    color: var(--forgot-password-hover);
+}
+
+
+@media screen and (width < 425px) {
+    .back{
+        position: absolute;
+        background: linear-gradient(var(--overlay-color), var(--overlay-color)), url(/images/buksu-image.jpg) no-repeat center;
+        background-size: cover;
+        height: 60vh;
+        width: 100vw;
+    }
+
+    form{
+        position: relative;
+        z-index: 10;
+        font-size: 15px;
+    }
+
+    .inputs-container .btn{
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (width >= 425px) and (width <= 768px) {
+    .back{
+        position: absolute;
+        background: linear-gradient(var(--overlay-color), var(--overlay-color)), url(/images/buksu-image.jpg) no-repeat center;
+        background-size: cover;
+        height: 60vh;
+        width: 100vw;
+    }
+
+    form{
+        position: relative;
+        z-index: 10;
+        font-size: 15px;
+    }
+
+    .inputs-container .btn{
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (width > 768px) and (width < 1024px) {
+    .back{
+        position: absolute;
+        background: linear-gradient(var(--overlay-color), var(--overlay-color)), url(/images/buksu-image.jpg) no-repeat center;
+        background-size: cover;
+        height: 60vh;
+        width: 100vw;
+    }
+
+    form{
+        position: relative;
+        z-index: 10;
+        font-size: 15px;
+    }
+
+    .inputs-container .btn{
+        font-size: 15px;
+    }
+}
+
+@media screen and (width >= 1024px) and (width < 1440px) {
+    html body{
+        display: grid;
+        grid-template-columns: 47vw 53vw;
+        grid-template-columns: repeat(2, 1fr);
+        background-color: var(--form-bg);
+        place-items: center;
+    }
+
+    .laptop-pc-side{
+        grid-row: 1;
+        grid-column: 2;
+        background: linear-gradient(var(--overlay-color), var(--overlay-color)), url(/images/buksu-image.jpg) center no-repeat;
+        height: 100vh;
+        width: 53vw;
+    }
+
+    main{
+        grid-row: 1;
+        grid-column: 1;
+        width: 50vw;
+    }
+
+    form{
+        position: static;
+        box-shadow: none;
+        gap: 0.5in;
+        height: 610px;
+        width: 400px;
+    }
+
+    form figure img{
+        height: 180px;
+        width: 180px;
+    }
+
+    .inputs-container .input-group, .inputs-container .btn{
+        height: 0.5in;
+    }
+}
+
+@media screen and (width >= 1440px) {
+    html body{
+        display: grid;
+        grid-template-columns: 47vw 53vw;
+        grid-template-columns: repeat((2, 1fr));
+        background-color: var(--form-bg);
+        place-items: center;
+    }
+
+    .laptop-pc-side{
+        grid-row: 1;
+        grid-column: 2;
+        background: linear-gradient(var(--overlay-color), var(--overlay-color)), url(/images/buksu-image.jpg) center no-repeat;
+        height: 100vh;
+        width: 53vw;
+    }
+
+    main{
+        grid-row: 1;
+        grid-column: 1;
+        width: 50vw;
+    }
+
+    form{
+        position: static;
+        box-shadow: none;
+        gap: 0.5in;
+        height: 610px;
+        width: 400px;
+    }
+
+    form figure img{
+        height: 180px;
+        width: 180px;
+    }
+
+    .inputs-container .input-group, .inputs-container .btn{
+        height: 0.5in;
+    }
+}
